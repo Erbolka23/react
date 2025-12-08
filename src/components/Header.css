@@ -1,0 +1,28 @@
+.header {
+  background-color: #0074ef;
+  padding: 15px 0;
+  color: white;
+}
+
+.header-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.logo {
+  margin: 0;
+  font-size: 24px;
+}
+.header {
+  background-color: #007bff;
+  padding: 18px 0;
+  color: white;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
