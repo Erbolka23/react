@@ -1,0 +1,23 @@
+import { useContext } from "react";
+import { StoreContext } from "../context/StoreContext";
+import { useParams } from "react-router-dom";
+
+function BasketDetail() {
+  const { basket } = useContext(StoreContext);
+  const { id } = useParams();
+
+  const item = basket.find(b => b.id === Number(id));
+
+  if (!item) {
+    return <p>Item not found</p>;
+  }
+
+  return (
+    <div className="container">
+      <h1>{item.title}</h1>
+      <p><strong>Author:</strong> {item.author}</p>
+    </div>
+  );
+}
+
+export default BasketDetail;
