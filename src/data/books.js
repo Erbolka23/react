@@ -1,17 +1,17 @@
 export const books = [
   {
     id: 1,
-    title: "Atomic Habits",
-    author: "James Clear",
-    year: 2018,
-    description: "A practical guide on how to build good habits and break bad ones."
+    title: "Deep Work",
+    author: "Cal Newport",
+    year: 2016,
+    description: "Rules for focused success in a distracted world."
   },
   {
     id: 2,
-    title: "The Richest Man in Babylon",
-    author: "George S. Clason",
-    year: 1926,
-    description: "A classic book on financial wisdom told through parables."
+    title: "The Psychology of Money",
+    author: "Morgan Housel",
+    year: 2020,
+    description: "Timeless lessons on wealth, greed, and happiness."
   },
   {
     id: 3,
