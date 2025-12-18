@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header-content">
-        <h2 className="logo">My Book Library</h2>
+        <h2 className="logo">Book Store Project</h2>
 
         <nav className="nav">
           <Link to="/">Books</Link>
