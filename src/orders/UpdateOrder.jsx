@@ -1,6 +1,6 @@
-import { useParams, useNavigate } from "react-router-dom";
-import { useContext, useState, useEffect } from "react";
-import { StoreContext } from "../context/StoreContext";
+import React, { useContext, useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { StoreContext } from '../context';
 
 function UpdateOrder() {
   // Все хуки находятся в начале функции

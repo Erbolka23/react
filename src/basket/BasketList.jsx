@@ -1,6 +1,6 @@
-import { useContext } from "react";
-import { StoreContext } from "../context/StoreContext";
-import { Link } from "react-router-dom";
+import React, { useContext } from 'react';
+import { StoreContext } from '../context';
+import { Link } from 'react-router-dom';
 
 function BasketList() {
   const { basket, removeFromBasket } = useContext(StoreContext);

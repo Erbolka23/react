@@ -1,11 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import { StoreProvider } from "./context/StoreContext";
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <StoreProvider>
-    <App />
-  </StoreProvider>
-);
+export { AuthContext, AuthProvider } from './AuthContext';
+export { StoreContext, StoreProvider } from './StoreContext';
+export { ThemeContext, ThemeProvider } from './ThemeContext';

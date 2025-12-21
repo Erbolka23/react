@@ -1,6 +1,6 @@
-import { useState, useContext } from "react";
-import { AuthContext } from "../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useContext } from 'react';
+import { AuthContext } from '../context';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 function Login() {
@@ -13,10 +13,7 @@ function Login() {
   });
 
   const handleChange = (e) => {
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value
-    });
+
   };
 
   const handleSubmit = (e) => {

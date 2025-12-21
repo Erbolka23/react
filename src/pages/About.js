@@ -1,4 +1,5 @@
-import "./Pages.css";
+import React from 'react';
+import './Pages.css';
 
 function About() {
   return (

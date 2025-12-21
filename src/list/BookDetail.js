@@ -1,8 +1,8 @@
-import { Link, useParams } from "react-router-dom";
-import { books } from "../data/books";
-import { useContext, useState } from "react";
-import { StoreContext } from "../context/StoreContext";
-import "./BookDetail.css";
+import React, { useContext, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { books } from '../data/books';
+import { StoreContext } from '../context';
+import './BookDetail.css';
 
 function BookDetail() {
   const { id } = useParams();
