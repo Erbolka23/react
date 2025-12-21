@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import './Login.css';
 
 function Login() {
   const { login } = useContext(AuthContext);
@@ -33,9 +34,10 @@ function Login() {
 
   return (
     <div className="container">
-      <h1>Login</h1>
+      <div className="page-wrapper">
+        <h1 className="auth-title">Login</h1>
 
-      <form onSubmit={handleSubmit} className="card">
+        <form onSubmit={handleSubmit} className="card auth-card">
         <input
           name="email"
           type="email"
@@ -55,7 +57,8 @@ function Login() {
         />
 
         <button type="submit">Login</button>
-      </form>
+        </form>
+      </div>
     </div>
   );
 }

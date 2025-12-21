@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import './Register.css';
 
 function Register() {
   const { register } = useContext(AuthContext);
@@ -31,9 +32,10 @@ function Register() {
 
   return (
     <div className="container">
-      <h1>Registration</h1>
+      <div className="page-wrapper">
+        <h1 className="auth-title">Registration</h1>
 
-      <form onSubmit={handleSubmit} className="card">
+        <form onSubmit={handleSubmit} className="card auth-card">
         <input
           name="fullName"
           placeholder="Full name"
@@ -86,7 +88,8 @@ function Register() {
         />
 
         <button type="submit">Register</button>
-      </form>
+        </form>
+      </div>
     </div>
   );
 }

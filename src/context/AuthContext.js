@@ -9,24 +9,25 @@ export function AuthProvider({ children }) {
 
   const register = (data) => {
     localStorage.setItem("registeredUser", JSON.stringify(data));
-    alert("Registration successful!");
+    alert("Registration successful");
   };
 
   const login = (email, password) => {
     const savedUser = JSON.parse(localStorage.getItem("registeredUser"));
 
-    if (
-      savedUser &&
-      savedUser.email === email &&
-      savedUser.password === password
-    ) {
+    if (!savedUser) {
+      alert("No registered user");
+      return false;
+    }
+
+    if (savedUser.email === email && savedUser.password === password) {
       setUser(savedUser);
       localStorage.setItem("user", JSON.stringify(savedUser));
       return true;
-    } else {
-      alert("Invalid email or password");
-      return false;
     }
+
+    alert("Wrong email or password");
+    return false;
   };
 
   const logout = () => {

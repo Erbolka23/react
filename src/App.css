@@ -36,55 +36,39 @@
     transform: rotate(360deg);
   }
 }
-/* ===== Custom layout for lab ===== */
-
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-}
-
-.card {
-  border: 1px solid #ddd;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  background-color: #fafafa;
-}
-
-button {
-  padding: 6px 12px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  background-color: #eee;
-}
-
-button:hover {
-  background-color: #ddd;
-}
-.container {
-  max-width: 400px;
-  margin: 40px auto;
-}
-
-.card {
+/* App layout for sticky footer */
+.app-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  min-height: 100vh;
 }
 
-input {
-  padding: 8px;
+.main-content {
+  flex: 1 0 auto;
+  padding: 60px 20px; /* ДОБАВЛЕНЫ ОТСТУПЫ */
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  background-color: var(--bg-color);
+  transition: all 0.3s;
 }
 
-button {
-  padding: 10px;
-  background: #2c3e50;
-  color: white;
-  border: none;
-  border-radius: 6px;
+/* Для мобильных */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 30px 15px;
+  }
+}
+
+.footer-sticky {
+  flex-shrink: 0;
+}
+
+/* Page wrapper spacing */
+.page-wrapper {
+  padding: 20px 0;
+}
+
+.page-wrapper > * + * {
+  margin-top: 40px;
 }

@@ -1,50 +1,62 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import './App.css';
 
 // Layout
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
 
-// Books
+// Pages
 import BookList from "./list/BookList";
 import BookDetail from "./list/BookDetail";
-
-// Basket & Orders
 import BasketList from "./basket/BasketList";
 import BasketDetail from "./basket/BasketDetail";
 import CreateOrder from "./orders/CreateOrder";
+import OrdersList from "./orders/OrdersList";
 import UpdateOrder from "./orders/UpdateOrder";
-
-// Auth
 import Login from "./auth/Login";
 import Register from "./auth/Register";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+
+// Context
 import { AuthProvider } from "./context/AuthContext";
+import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
   return (
     <AuthProvider>
-      <Router>
-        <Header />
+      <ThemeProvider>
+        <Router>
+          <div className="app-container">
+            <Header />
 
-        <Routes>
-          {/* Books */}
-          <Route path="/" element={<BookList />} />
-          <Route path="/book/:id" element={<BookDetail />} />
+            <main className="main-content">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/books" element={<BookList />} />
+                <Route path="/book/:id" element={<BookDetail />} />
 
-          {/* Basket */}
-          <Route path="/basket" element={<BasketList />} />
-          <Route path="/basket/:id" element={<BasketDetail />} />
+                <Route path="/basket" element={<BasketList />} />
+                <Route path="/basket/:id" element={<BasketDetail />} />
 
-          {/* Orders */}
-          <Route path="/create-order" element={<CreateOrder />} />
-          <Route path="/update-order/:id" element={<UpdateOrder />} />
+                <Route path="/create-order" element={<CreateOrder />} />
+                <Route path="/update-order/:id" element={<UpdateOrder />} />
+                <Route path="/orders/edit/:orderId" element={<UpdateOrder />} />
+                <Route path="/orders" element={<OrdersList />} />
 
-          {/* Auth */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
 
-        <Footer />
-      </Router>
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </main>
+
+            <Footer />
+          </div>
+        </Router>
+      </ThemeProvider>
     </AuthProvider>
   );
 }

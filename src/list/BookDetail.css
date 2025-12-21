@@ -1,0 +1,147 @@
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  opacity: 0.8;
+}
+
+.book-detail-card {
+  display: flex;
+  gap: 40px;
+  background: var(--card-bg, #f8f9fa);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--shadow, rgba(0,0,0,0.1));
+}
+
+.book-image-section {
+  flex: 0 0 280px;
+}
+
+.book-detail-img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.book-info-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.book-title {
+  font-size: 32px;
+  margin: 0;
+  color: var(--text-color, #333);
+}
+
+.author {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.book-meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.genre-badge {
+  background: #667eea;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.price-tag {
+  font-size: 24px;
+  font-weight: 700;
+  color: #27ae60;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-color, #555);
+  margin: 10px 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.add-basket-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.add-basket-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.add-basket-btn:disabled {
+  background: #27ae60;
+  opacity: 0.9;
+}
+
+.back-btn {
+  background: var(--card-bg, #eee);
+  color: var(--text-color, #333);
+  border: 1px solid var(--border-color, #ddd);
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.back-btn:hover {
+  opacity: 0.8;
+}
+
+.success-msg {
+  color: #27ae60;
+  font-weight: 600;
+  margin-top: 12px;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .book-detail-card {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .book-image-section {
+    flex: 0 0 auto;
+  }
+  
+  .book-title {
+    font-size: 24px;
+  }
+}

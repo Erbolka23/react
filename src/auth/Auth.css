@@ -1,0 +1,18 @@
+/* Styles for Login/Register pages */
+.auth-card {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.auth-card input,
+.auth-card select,
+.auth-card button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.auth-title {
+  text-align: center;
+  margin-bottom: 12px;
+}

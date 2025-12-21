@@ -14,8 +14,10 @@ function BasketDetail() {
 
   return (
     <div className="container">
-      <h1>{item.title}</h1>
-      <p><strong>Author:</strong> {item.author}</p>
+      <div className="page-wrapper">
+        <h1>{item.title}</h1>
+        <p><strong>Author:</strong> {item.author}</p>
+      </div>
     </div>
   );
 }
