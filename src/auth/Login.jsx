@@ -12,8 +12,14 @@ function Login() {
     password: ""
   });
 
+  // ✅ ВОТ ЭТО БЫЛО ПУСТО — ИЗ-ЗА ЭТОГО НЕЛЬЗЯ БЫЛО ВВОДИТЬ
   const handleChange = (e) => {
+    const { name, value } = e.target;
 
+    setForm(prevForm => ({
+      ...prevForm,
+      [name]: value
+    }));
   };
 
   const handleSubmit = (e) => {
@@ -35,25 +41,25 @@ function Login() {
         <h1 className="auth-title">Login</h1>
 
         <form onSubmit={handleSubmit} className="card auth-card">
-        <input
-          name="email"
-          type="email"
-          placeholder="Email"
-          value={form.email}
-          onChange={handleChange}
-          required
-        />
+          <input
+            name="email"
+            type="email"
+            placeholder="Email"
+            value={form.email}
+            onChange={handleChange}
+            required
+          />
 
-        <input
-          name="password"
-          type="password"
-          placeholder="Password"
-          value={form.password}
-          onChange={handleChange}
-          required
-        />
+          <input
+            name="password"
+            type="password"
+            placeholder="Password"
+            value={form.password}
+            onChange={handleChange}
+            required
+          />
 
-        <button type="submit">Login</button>
+          <button type="submit">Login</button>
         </form>
       </div>
     </div>
